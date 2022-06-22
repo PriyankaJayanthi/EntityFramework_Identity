@@ -1,0 +1,180 @@
+﻿body {
+    margin: 0px;
+    max-width: 1024px;
+    margin: auto;
+    display: block;
+    font-family: sans-serif;
+}
+
+.container-fluid {
+    max-width: 1024px;
+    margin: auto;
+    display: block;
+}
+
+.logo-image {
+    height: 90px;
+    width: 169px;
+    display: block;
+}
+
+.nav-menu-items a {
+    text-align: center;
+    margin: 0px;
+    color: black;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.nav-menu-items {
+    display: block;
+    float: left;
+    background-color: blue;
+    padding: 15px;
+}
+
+.emptyPlace {
+    background-color: chocolate;
+}
+
+.login {
+    background-color: blue;
+    display: block;
+    float: left;
+    color: black;
+    padding: 25px;
+}
+
+    .login a {
+        color: black;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+a:hover {
+    color: black;
+}
+
+.logo {
+    margin: 0px;
+    padding: 0px;
+}
+
+.headline {
+    padding: 15px 0px;
+    text-align: left;
+}
+
+h4, h3, h1, p {
+    color: black;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.asside-menu {
+    padding: 25px 0px;
+}
+
+    .asside-menu ul li {
+        text-align: justify;
+    }
+
+.carousel_images {
+    width: 700px;
+    height: 300px;
+}
+
+.images {
+    width: 250px;
+    height: 250px;
+    padding: 15px;
+}
+
+
+.footer {
+    background-color: rgb(153, 0, 255);
+    text-align: center;
+    display: block;
+    text-align: center;
+    float: left;
+    width: 100%;
+    height: 60px;
+}
+
+span {
+    padding: 20px 0px;
+    display: inline-block;
+}
+
+.leftBody {
+    background-color: rgba(255, 255, 0, 0.507);
+}
+
+.rightBody {
+    background-color: grey;
+}
+
+.form-body {
+    background-color: rgba(255, 255, 0, 0.932);
+    padding: 20px;
+}
+
+.email {
+    display: inline-block;
+    width: 200px;
+    text-transform: uppercase;
+}
+
+.name {
+    display: inline-block;
+    width: 200px;
+    text-transform: uppercase;
+}
+
+.messeage {
+    display: inline-block;
+    width: 200px;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 45px;
+}
+
+.teliphone {
+    display: inline-block;
+    width: 200px;
+    text-transform: uppercase;
+}
+
+.reset-button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    text-transform: uppercase;
+}
+
+.sign-in-button {
+    padding: 10px;
+    background-color: rgba(0, 174, 255, 0.945);
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.buttons {
+    padding: 0px 0px 20px 220px;
+}
+
+.form-items {
+    border-style: solid;
+    border-radius: 20px;
+    width: 800px;
+    display: block;
+    margin: 0px;
+    padding: 10px;
+}
+
+.headline-login {
+    padding: 10px;
+    display: block;
+}

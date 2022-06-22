@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="mx-auto">
+    <div class="container-fluid  my-3 bg-dark text-white">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-expand-sm bg-info text-black" id="navmenubox">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav text-white">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("Index", "Home")">HOME PAGE</a>
+                        </li>
+                        @if ((User.IsInRole("Admin")) || (User.IsInRole("User")))
+                        {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="@Url.Action("Index", "People")">People Info</a>
+                    </li>
+                          <li class="nav-item">
+                                <a class="nav-link text-dark" href="@Url.Action("Index", "Role")">Role Management</a>
+                          </li>
+                    }
+                        @if (User.IsInRole("Admin"))
+                        {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("Index", "Country")">Country</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("Index", "City")">City</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("Index", "Language")">Add_Language</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("Index", "LangPerson")">PersonLanguage</a>
+                        </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <footer class="navbar navbar-expand-sm bg-info">
+            <span style="padding-left:240px">
+                ©Jayanthi Priyanka @DateTime.Now.ToString("yy-MM-dd")  <a class="btn btn-primary" href="#">Back to top</a>
+            </span>
+        </footer>
+
+        <script src="~/js/site.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        @RenderSection("Scripts", required: false)
+    </div>
+   </div>
+</body>
+</html>

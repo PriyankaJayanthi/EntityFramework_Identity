@@ -1,0 +1,33 @@
+﻿@model MVC_ViewModels_Data.PeopleViewModel
+
+<form asp-action="CreatePerson" method="post" role="form">
+
+    @Html.AntiForgeryToken()
+    <div>
+        <h3><b>Create a new Person</b></h3>
+        <label asp-for="Name"></label>
+        <br />
+        <input asp-for="Name" />
+        <br />
+        <span id="redtext" asp-validation-for="Name"></span>
+        <br />
+        <label asp-for="ContactNumber"></label>
+        <br />
+        <input asp-for="ContactNumber" />
+        <br />
+        <span id="redtext" asp-validation-for="ContactNumber"></span>
+        <br />
+        <label asp-for="City"></label>
+        <br />
+        <select asp-for="City">
+            @foreach (var city in Model.CityList)
+            {
+            <option>@city.Name</option>            
+            }
+
+        </select>
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success" name="btnCreate" value="Add Person" />
+    </div>
+</form>

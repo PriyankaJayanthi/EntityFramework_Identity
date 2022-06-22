@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "AddUserToRole";
+}
+<h1>Add user to role</h1>
+
+<form asp-action="AddUserToRole" method="post">
+    <div class="form-group">
+        <label class="control-label">Role:</label>
+        <select name="role" class="form-control" asp-items="ViewBag.Roles"></select>
+    </div>
+    <div class="form-group">
+        <label class="control-label">User:</label>
+        <select name="user" class="form-control" asp-items="ViewBag.Users"></select>
+    </div>
+    <input type="submit" value="Add to role" class="btn btn-primary" />
+</form>

@@ -1,0 +1,14 @@
+﻿@model MVC_ViewModels_Data.Models.LanguageViewModel
+
+<form asp-controller="Language" asp-action="Index" asp-route-id="" method="post" id="Add">
+    <h1> Add a Language here:</h1>
+    <label asp-for="@Model.CreateLanguageViewModel.Name">Language Name:</label>
+    <input asp-for="@Model.CreateLanguageViewModel.Name" />
+    <input type="submit" value="Save" />
+</form>
+
+@foreach (var lang in Model.List)
+{
+    <a>@lang.Name</a>
+    <br />
+}

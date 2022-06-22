@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h1> Welcome </h1>
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    <p>Please Login</p>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p> Welcome!! You are now logged in. You are having below role(s).</p>
+
+    @if (User.IsInRole("User"))
+    {
+        <p>-> User</p>
+    }
+    @if (User.IsInRole("Admin"))
+    {
+        <p>-> Admin</p>
+    }
+}

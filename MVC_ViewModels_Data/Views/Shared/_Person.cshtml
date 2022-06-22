@@ -1,0 +1,11 @@
+﻿
+@model MVC_ViewModels_Data.Models.Person
+
+
+
+<tr>
+    <td>@Model.Name</td>
+    <td>@Model.ContactNumber</td>
+    <td>@Model.CityId</td>
+    <td><a href="#" onClick="location.href='@Url.Action("DeletePerson", "People", new { id = Model.PersonId })'">Delete</a></td>
+</tr>

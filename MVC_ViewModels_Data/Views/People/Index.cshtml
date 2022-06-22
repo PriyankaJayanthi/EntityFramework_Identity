@@ -1,0 +1,68 @@
+﻿@model PeopleViewModel
+
+<div>
+    <h2>@ViewBag.Title</h2>
+    <br />
+    <h4>People Management</h4>
+
+    <div>
+        <br />
+        <P>@ViewBag.Mess</P>
+        <br />
+    </div>
+
+    <div class="flexwrap">
+
+        <div>
+
+            <form  asp-action="Index" method="post" role="form">
+                @Html.AntiForgeryToken()
+                <h3><b>Filter Person details by search</b></h3>
+                <label asp-for="FilterString"></label>
+                <br />
+                <input asp-for="FilterString" />
+                <br />
+                <br />
+                <input type="submit" class="btn btn-primary" name="btnFilter" value="Search" />
+                <br />
+                <br />
+                <input type="button" class="btn btn-success" name="btnReset" value="Reset Search" onClick="location.href='@Url.Action("Index", "People")'" />
+            </form>
+
+        </div>
+
+        <div>
+            <partial name="_CreatePersonView" for="@Model" />
+        </div>
+    </div>
+
+    <br />
+    <div>
+        <table class="table table-dark">
+            <thead>
+
+                <tr>
+                    <th>NAME</th>
+                    <th>PhoneNumber </th>
+                    <th>City </th>
+                    <th>Options </th>
+                </tr>
+                <tr>
+                    <th>@Model.SearchResultEmpty</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model.PeopleListView)
+                {
+                    <partial name="_Person" model="item" />
+             
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

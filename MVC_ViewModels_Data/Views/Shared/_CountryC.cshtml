@@ -1,0 +1,8 @@
+﻿@model MVC_ViewModels_Data.Models.CountryViewModel
+
+    @foreach (var item in Model.List)
+    {
+
+        <partial name="_Country" for="@item" />
+    }
+
