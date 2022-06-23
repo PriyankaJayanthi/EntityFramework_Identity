@@ -45,13 +45,19 @@
                     <th>NAME</th>
                     <th>PhoneNumber </th>
                     <th>City </th>
+                        @if (User.IsInRole("Admin"))
+                        {
                     <th>Options </th>
+                        }
                 </tr>
                 <tr>
                     <th>@Model.SearchResultEmpty</th>
                     <th></th>
                     <th></th>
+                 @if (User.IsInRole("Admin"))
+                  {
                     <th></th>
+                  }
                 </tr>
             </thead>
             <tbody>
