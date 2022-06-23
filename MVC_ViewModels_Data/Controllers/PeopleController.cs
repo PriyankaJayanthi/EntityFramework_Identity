@@ -68,7 +68,7 @@ namespace MVC_ViewModels_Data.Controllers
                 return RedirectToAction(nameof(Index));
         }
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult DeletePerson(int id)
         {
             _peopleService.Remove(id);
