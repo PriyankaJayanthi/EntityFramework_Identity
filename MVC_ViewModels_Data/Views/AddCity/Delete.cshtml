@@ -1,0 +1,26 @@
+﻿@model MVC_ViewModels_Data.Models.City
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<h3>Deleted below City combination</h3>
+<div>
+    <h4>City</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Country.Name)
+        </dd class>
+    </dl>
+    
+
+</div>

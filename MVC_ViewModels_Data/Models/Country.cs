@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace MVC_ViewModels_Data.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CountryId { get; set; }
         [Required]
+        [DisplayName("Country")]
         public string Name { get; set; }
         public virtual ICollection<City> Cities { get; set; }
     }

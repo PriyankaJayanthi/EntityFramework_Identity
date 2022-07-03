@@ -25,26 +25,24 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="@Url.Action("Index", "People")">People Info</a>
                     </li>
-                         
-                    }
+                         <li class="nav-item">
+                         <a class="nav-link text-dark" href="@Url.Action("Index", "AddCountry")">Country</a>
+                         </li>
+                          <li class="nav-item">
+                          <a class="nav-link text-dark" href="@Url.Action("Index", "AddCity")">City</a>
+                          </li>
+                         }
                         @if (User.IsInRole("Admin"))
                         {
-                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="@Url.Action("Index", "Role")">Role Management</a>
-                          </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="@Url.Action("Index", "Country")">Country</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="@Url.Action("Index", "City")">City</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="@Url.Action("Index", "Language")">Add_Language</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="@Url.Action("Index", "LangPerson")">PersonLanguage</a>
-                        </li>
-                        }
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="@Url.Action("Index", "Role")">Role Management</a>
+                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="@Url.Action("Index", "Language")">Add_Language</a>
+                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link text-dark" href="@Url.Action("Index", "LangPerson")">PersonLanguage</a>
+                                                    </li>}
                     </ul>
                 </nav>
             </div>
